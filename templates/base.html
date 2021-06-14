@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../static/styles.css" rel="stylesheet" />
+        <link href="../img/sun.png" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="nav">
+            <div class="container">
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        {% if current_user.is_authenticated %}
+                            <li><a href="\">Home</a></li>
+                            <li><a href="cities">Cities</a></li>
+                            <li><a href="placestovisit">Places to visit</a></li>
+                            <li><a href="map">Map</a></li>
+                            <li><a href="logout">Log out</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+
+        {% block header %}
+
+        <header class="masthead">
+            <style>
+                .masthead {
+                    background: linear-gradient(to bottom, rgba(255, 255, 252, 0) 0%, rgba(255, 255, 255, 0.1) 50%, white 100%),
+                    url('https://source.unsplash.com/collection/11480405/1600x900');
+                }
+            </style>
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Australia</h1>
+                    {% block button %}
+                    {% endblock %}
+                </div>
+            </div>
+        </header>
+
+        {% endblock %}
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show">
+                        <strong>{{ message }}</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+            {% block content %}
+            {% endblock %}
+
+
+        <div class="footer-basic">
+            <footer>
+                <div class="social">
+                    <a href="#"><i class="icon ion-social-instagram"></i></a>
+                    <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                    <a href="#"><i class="icon ion-social-twitter"></i></a>
+                    <a href="#"><i class="icon ion-social-facebook"></i></a>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Home</a></li>
+                    <li class="list-inline-item"><a href="#">Services</a></li>
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </footer>
+        </div>
+
+
+        <!-- Jquery needed -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../static/scripts.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
+
+    </body>
+</html>

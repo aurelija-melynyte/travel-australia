@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+<header class="masthead2">
+  <style>
+       .masthead2 {
+        background: linear-gradient(to bottom, rgba(255, 255, 252, 0) 0%, rgba(255, 255, 255, 0.1) 50%, white 100%),
+        url('https://source.unsplash.com/collection/11480405/1600x900');
+        }
+  </style>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Australia</h1>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class = "content-section margin-300">
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <fieldset class="form-group font-15">
+            <legend class="border-bottom font-3">Registration</legend>
+
+            <div class="form-group">
+                {{form.name.label(class="form-control-label")}}
+                {% if form.name.errors %}
+                {{form.name(class="form-control form-control-lg is-invalid")}}
+                <div class = "invalid-feedback">
+                    {% for error in form.name.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{form.name(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{form.surname.label(class="form-control-label")}}
+                {% if form.surname.errors %}
+                {{form.surname(class="form-control form-control-lg is-invalid")}}
+                <div class = "invalid-feedback">
+                    {% for error in form.surname.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{form.surname(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{form.email.label(class="form-control-label")}}
+                {% if form.email.errors %}
+                {{form.email(class="form-control form-control-lg is-invalid")}}
+                <div class = "invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{form.email(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{form.password.label(class="form-control-label")}}
+                {% if form.password.errors %}
+                {{form.password(class="form-control form-control-lg is-invalid")}}
+                <div class = "invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>{{error}}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{form.password(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{form.password_check.label(class="form-control-label")}}
+                {% if form.password_check.errors %}
+                    {{form.password_check(class="form-control form-control-lg is-invalid")}}
+                    <div class = "invalid-feedback">
+                    {% for error in form.password_check.errors %}
+                        <span>{{error}}</span>
+                    {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.password_check(class="form-control form-control-lg")}}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="register-btn btn-rose") }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+

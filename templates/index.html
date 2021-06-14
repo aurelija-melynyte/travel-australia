@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block button %}
+
+{% if current_user.is_authenticated %}
+    <h2 class="mx-auto my-0 text-uppercase">Hello, {{current_user.name}} </h2>
+{% else %}
+    <button type="button" class="btn btn-rose-bg"><a href="registration">SIGN IN</a></button>
+    <button type="button" class="btn btn-rose-bg"><a href="login">LOGIN</a></button>
+
+{% endif %}
+{% endblock %}
+
+
+{% block content %}
+<div style="height: 1000px">
+                <h2 class="myH2">About the Australia</h2>
+                    <p class="myP">
+                        Australia boasts some of the world's most beautiful natural wonders such as the
+                        Great Barrier Reef - the world's largest coral reef system, the Heritage Listed
+                        Ayers Rock (Uluru), the Bungle Bungles in Western Australia, the Twelve Apostles
+                        along the Great Ocean Road. Man-made icons include the Sydney Harbour Bridge and
+                        the Sydney Opera House.
+                        The population of Australia in 2011 was 21,507,717 with the most populated states
+                        being New South Wales, Victoria and Queensland. Canberra is the Nations' capital is
+                        an interesting city that is home to the Parliament House, Old Parliament House and
+                        the War Memorial.
+                        The geography of Australia ranges from deserts, mountainous, tropical islands, rain
+                        forests, lakes and rivers. The longest river in Australia is the Murray River which
+                        is 2375 kilometres long. The Murray River begins in New South Wales, then travels
+                        through Victoria and finally South Australia where the Murray Mouth meets the Southern
+                        Ocean. The Murray River is home to a variety of wildlife such as platypus, Murray cod,
+                        golden perch, trout and cod. The river is also famous for its paddle steamers and there
+                        are paddle steamers that cruise along the river for several days.
+                        There are many beautiful lakes in Australia with Lake Eyre in South Australia covering
+                        a surface area of 9500 square kilometres, when the lake is full it is the largest lake
+                        in Australia. Another lake that attracts many visitors is Lake St Clair in Tasmania. Lake
+                        St Clair is the deepest lake in Australia that covers an area of 430 square metres and
+                        forms part of Cradle Mountain. Lake Argyle is the largest artificial lake which covers a
+                        surface area of 1000 square kilometres. Located in Western Australia near Kununurra the
+                        primary inflow of Lake Argyle comes from the Ord River. Lake Argyle is very beautiful and
+                        a cruise is a great way to experience the lake.
+                        The climate in Australia varies with tropical climate in the northern parts, subtropical
+                        in the south and temperate in the south east and south west. Canberra can be very cool in
+                        winter and the coldest temperature recorded was -14.60 degrees in 1971 while Stanthorpe in
+                        Queensland holds the record for the lowest temperature in the state. Rainfall in Australia
+                        is generally seasonal with the highest rainfall occurring at Mount Lofty in South Australia
+                        and the lowest in the desert regions. The varied weather in Australia allows for a variety of
+                        outdoor sports such as sailing, skiing, hiking and rock climbing. {{ current_user.surname }}
+                    </p>
+</div>
+
+{% endblock %}

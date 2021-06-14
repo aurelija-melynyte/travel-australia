@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row row-cols-1 row-cols-md-2 g-4 p-100">
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/11521193/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['sydney'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['sydney'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">Sydney</h5>
+        <p class="card-text">
+          Sydney is the first stop on many Australian itineraries, and for good reason. It's an inviting blend of the
+          exhilarating and easygoing. You can find excitement in the city, but with a short drive you'll hit the golden
+          sand of beaches like Bondi and Manly. Plus, with endless nature at its doorstep, Sydney is the starting point
+          for day trips serving up fresh air, unique flavours and locals who know a thing or two about living life to
+          the fullest.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/2204961/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['melbourne'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['melbourne'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Melbourne</h5>
+        <p class="card-text">
+          Melbourne is a blend of bustling laneways, world-class restaurants and captivating museums. The locals love
+          their coffee, and serve it up in abundance at cosy cafes. There's always a sense of excitement here – whether
+          its in the city's fascinating flavours or fierce sporting rivalries. Attend a sports event, drink a cocktail
+          on a rooftop and uncover the stories hidden within Melbourne's art-filled alleyways.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/8893821/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['brisbane'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['brisbane'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Brisbane</h5>
+        <p class="card-text">
+          Life in Brisbane revolves around the outdoors. As the capital of Australia's Sunshine State, Brisbane
+          invites you to kick off your shoes, grab your mates and enjoy the food, art and adventure on offer.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/8825762/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['perth'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['perth'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Perth</h5>
+        <p class="card-text">
+          Nature and urban life exist in harmony in Perth, on Australia's west coast. Here, where the locals soak up
+          more sunny days than in any other Australian capital city, you can visit nearby Rottnest Island, walk in
+          leafy Kings Park and experience Swan Valley's vineyards, art, food and history. For local culture, wander
+          the nearby city of Fremantle's winding portside streets, Perth city centre's museum and gallery precinct or
+          peel back the layers of this urban landscape with an Aboriginal guide.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4 p-100">
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/1747009/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+            <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['adelaide'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['adelaide'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Adelaide</h5>
+        <p class="card-text">
+          With a burgeoning small-bar scene, world-class art and music, and a festival calendar to rival that of any
+          other Australian city, Adelaide is a destination worth discovering. Explore its laneway secrets, take in
+          the stunning natural beauty, or head to one of the incredible wine regions that surrounds the city.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/11358812/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['canberra'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['canberra'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Canberra</h5>
+        <p class="card-text">
+          Canberra might be smaller than Sydney to its north and Melbourne to its south, but there's still plenty to
+          discover. The small town vibe means it's easy to get around and the locals are eager to share the best of
+          their food, wine, beer and attractions. Within the city limits you'll find museums, galleries, breweries
+          and modern architecture, but just minutes away lies the quiet nature of mountains, valleys and everything
+          in between.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/9759369/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['hobart'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['hobart'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Hobart</h5>
+        <p class="card-text">
+          Climb a mountain and view captivating modern art in the same day. Eat fish and chips from a floating fish
+          punt, or dine in the finest and freshest of restaurants. Add thriving markets, an unsurpassed natural setting
+          and a tangible sense of history, and Tasmania's capital city really does have it all.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://source.unsplash.com/collection/1130644/500x350"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h2>Temperature</h2></td>
+              <td><h2>{{temp_dict['darwin'][0]}}C</h2></td>
+              <td><h2>/</h2></td>
+              <td><h2>{{temp_dict['darwin'][1]}}C</h2></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Darwin</h5>
+        <p class="card-text">
+          Welcome to the Northern Territory's unhurried capital, Darwin, with its balmy nights, colourful characters
+          and outdoor adventures. As well as markets, crocodiles and cruises, you'll find strong Aboriginal cultures
+          here, as evidenced by the array of languages spoken in the streets and the vibrant Aboriginal art that fills
+          the city's galleries, museums and streetscapes. The city's proximity to Asia means you'll also find strong
+          Asian influences, especially in the energetic food scene and buzzing night markets.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

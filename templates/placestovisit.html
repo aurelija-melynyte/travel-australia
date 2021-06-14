@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% if list != [] and list[0] != None %}
+  <div class="container location-btn-margin">
+    <h2><strong>Your location list
+    <i class="fa fa-heart" style="font-size:20px;color:red;"></i></strong></h2>
+  </div>
+  {% for elem in list %}
+    {% if elem != None %}
+      <div class="container location-btn-margin">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src={{image.pop()}} alt="" height=100 width=180></td>
+              <td><i class="fa fa-ellipsis-h" style="font-size:50px;padding:20px"></i></td>
+              <td><h3>{{ elem }}</h3></td>
+              <td>
+                <form action="" method="post">
+                  <button type="submit" class="btn btn-mint-bg" name="remove_your_location" value="{{ elem }}">Remove</button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="container location-btn-margin">
+  <button type="button" class="btn btn-rose-bg"><a href="map">See your location list on the map</a></button>
+  <button type="button" class="btn btn-rose-bg"><a href="addlocation">Add new location</a></button>
+</div>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"></th>
+      <th scope="col">Territory</th>
+      <th scope="col">Place</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for value in values %}
+    <tr>
+      <th scope="row">{{values.index(value) + 1}}</th>
+      <td><img src={{image.pop()}} alt="" height=250 width=400></td>
+      {% for element in value %}
+      <td>{{element}}</td>
+      {% endfor %}
+      <td>
+        <form action="" method="post">
+          <button type="submit" class="btn btn-rose-bg" name="add_your_location" value="{{value[1]}}">Add to your list
+            <i class="fa fa-heart" style="font-size:20px;color:red;"></i></button>
+        </form>
+      </td>
+
+    {% endfor %}
+
+  <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
+  </tbody>
+</table>
+
+
+
+{% endblock %}
